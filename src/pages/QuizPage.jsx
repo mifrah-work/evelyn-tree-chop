@@ -29,7 +29,7 @@ export const QuizPage = ({ onNavigate }) => {
 
   // Generate a random question
   const generateQuestion = () => {
-    const tables = [3, 4];
+    const tables = [3, 4, 5];
     const table = tables[Math.floor(Math.random() * tables.length)];
     const multiplier = Math.floor(Math.random() * 11);
     const answer = table * multiplier;
@@ -192,7 +192,7 @@ export const QuizPage = ({ onNavigate }) => {
                     ) : (
                       <>
                         <p className="result-text">✗ Incorrect</p>
-                        <p className="result-sub">The answer is {currentQuestion.answer}</p>
+                        <p className="result-sub">Try again. You can do it!</p>
                         <button
                           className="next-btn"
                           onClick={() => {
