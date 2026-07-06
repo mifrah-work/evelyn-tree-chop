@@ -29,9 +29,9 @@ export const QuizPage = ({ onNavigate }) => {
 
   // Generate a random question
   const generateQuestion = () => {
-    const tables = [3, 4, 5];
-    const table = tables[Math.floor(Math.random() * tables.length)];
-    const multiplier = Math.floor(Math.random() * 11);
+    const rand = Math.random();
+    const table = rand < 0.85 ? 6 : [3, 4, 5][Math.floor(Math.random() * 3)];
+    const multiplier = Math.floor(Math.random() * 7) + 1;
     const answer = table * multiplier;
     
     return {
